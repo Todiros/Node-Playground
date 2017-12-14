@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 // ===============
 // REQUIRES
 const path = require('path')
@@ -10,21 +10,18 @@ const hbs = require('express-handlebars')
 const server = express()
 const port = process.env.PORT || 3000
 
-server.use(express.static(path.join(__dirname, '/public')))
-server.set('views', path.join(__dirname, '/views'))
-
-server.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main'}))
-server.set('view engine', 'hbs')
+server.use(express.static(path.join(__dirname, 'public')))
 
 // ===============
 // VIEW - HANDLEBARS
-
+server.set('views', path.join(__dirname, 'views'))
+server.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutDir: path.join(__dirname, 'views/layouts')}))
+server.set('view engine', 'hbs')
 
 // ===============
 // ROUTES
 server.get('/', (req, res) => {
-  // TODO: change to render
-  res.send('home')
+  res.render('home')
 });
 
 server.use((req, res, next) => {
@@ -33,8 +30,7 @@ server.use((req, res, next) => {
 });
 
 server.get('/about', (req, res) => {
-  // TODO: change to render
-  res.send('about')
+  res.render('about')
 });
 
 server.get('/profile', (req, res) => {
@@ -65,6 +61,6 @@ server.use((req, res) => {
 // ===============
 // SERVER START
 server.listen(port, () => {
-  console.log(`Fired @:${port} ...`);
+  console.log(`Running @:${port} ...`)
 });
 
