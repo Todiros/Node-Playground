@@ -91,3 +91,19 @@ server.use((err, req, res, next) => {
    res.render('500');
 });
 ```
+## PostgreSQL
+```
+// TODO
+```
+## AJAX && jQuery
+```
+// TODO
+```
+## Handlebars
+```
+// TODO
+```
+## Materialize
+```
+// TODO
+```
