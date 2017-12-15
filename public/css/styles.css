@@ -1,18 +1,39 @@
 body {
-    background-color: #3B3738;
+    background-color: #DFE2DB;
+}
+
+.header-wrapper {
+    width: 100%;
 }
 .content-wrapper {
     width: 100%;
 }
 
 .nav-wrapper {
-    background-color: #2B2B2B;
-    height: 100px;
+    background-color: #3B3738;
+    min-height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
 }
 
-.nav-wrapper > a {
+nav#transparent-nav, #transparent-nav .nav-wrapper{
+    background-color: rgba(0, 0, 0, 0.0);
+    box-shadow: none;
+}
+
+.header-wrapper .nav-wrapper a {
+    posiiton: absolute;
     text-transform: uppercase;
     font: 30px /2.5 'Monoton', cursive;
+    margin-top: 20px;
+    left: 30%;
+    color: #DFE2DB;
+}
+
+.nav-wrapper a:hover {
+   color: #DFE2DB;
 }
 
 /* home page centralized menu */
@@ -37,22 +58,20 @@ body {
 .not-active {
     pointer-events: none;
     cursor: default;
-    color: darkgray;
+    color: darkgray !important;
 }
 
 #main-nav, #about-nav {
     font: 20px /1 'Jura', sans-serif;
-    color: #ECECEA;
     text-align: center;
 }
 
 #about-nav {
     margin-top: 80px;
-    min-width: 671px;
+/*     min-width: 671px; */
 }
 
 #about-nav li {
-/*     padding: 10px 5px 10px 5px; */
     display: inline;
 }
 
@@ -61,30 +80,39 @@ body {
 }
 
 #about-nav li .active {
-    background-color: #2B2B2B;
+    background-color: #3B3738;
+    color: #DFE2DB;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+}
+
+li.active a:hover{
+  
 }
 
 .slashes {
     margin: 0 5px 0 10px;
 }
 
-a, a:link {
-    color: #ECECEA; 
+#about-nav a, #main-nav a {
+    color: #2B2B2B; 
     text-decoration: none;
 }
 
-a:hover {
-    color: #D6D6D6;
+#about-nav a:hover, #main-nav a:hover {
+    color: #525252 !important;
 }
 
-.canvas {
+#canvas {
     position: absolute;
     top: 175px;
     bottom: 0;
     right: 0;
     left: 0;
     width: 80%;
-    min-width: 671px;
-    background-color: #2B2B2B;
+    min-width: 675px;
+    background-color: rgba(59, 55, 56, 0.95);
     margin: 0 auto 20px auto;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
