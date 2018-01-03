@@ -1,29 +1,46 @@
-# RECURSION
-### Node Playground
----
+# RECURSION (Node Playground)
 
 This project exist for the sole purpose of explaining itself.
+
+---
+
+### Table of Content
+
+- [RECURSION (Node Playground)](#recursion-node-playground)
+        - [Table of Content](#table-of-content)
+    - [Node](#node)
+    - [Express](#express)
+        - [Basic Setup](#basic-setup)
+        - [Routes](#routes)
+                - [Basic](#basic)
+                - [Advanced](#advanced)
+    - [PostgreSQL](#postgresql)
+    - [AJAX & jQuery](#ajax-jquery)
+    - [Handlebars](#handlebars)
+    - [Materialize](#materialize)
+    - [*SASS*](#sass)
+    - [Webpack & Babel](#webpack-babel)
 
 ## Node
 
 Initialize node
 
-``` 
+```powershell
 npm init
 ```
 
 Start server
 
-```
+```powershell
 node server.js
 ```
-Where **server.js** is the main file. (index.js / app.js)
+*Where **server.js** is the main file. (index.js / app.js)*
 
 ## Express
 
 Install with npm
 
-``` 
+```powershell
 npm install express -S
 ```
 
@@ -45,6 +62,7 @@ server.listen(3000, () => {
 ### Routes
 
 ##### Basic
+
 ``` javascript
 server.get('/', (req, res) => {
   res.send('home');
@@ -56,12 +74,13 @@ server.get('/about', (req, res) => {
 ```
 
 ##### Advanced
+
 ``` javascript
 server.get('/', (req, res) => {
-   res.render('home'); 
+   res.render('home');
 });
 
-// Chaining requests until it hits the correct one 
+// Chaining requests until it hits the correct one
 server.use((req, res, next) => {
    console.log(`Looking for URL: ${req.url}`);
    next();
@@ -69,11 +88,11 @@ server.use((req, res, next) => {
 
 // rendering views
 server.get('/about', (req, res) => {
-   res.render('about'); 
+   res.render('about');
 });
 
 server.get('/credits', (req, res) => {
-   res.render('credits');  
+   res.render('credits');
 });
 
 // Handling Errors
@@ -91,19 +110,38 @@ server.use((err, req, res, next) => {
    res.render('500');
 });
 ```
+
 ## PostgreSQL
-```
+
+```sql
 // TODO
 ```
-## AJAX && jQuery
-```
+
+## AJAX & jQuery
+
+```javascript
 // TODO
 ```
+
 ## Handlebars
-```
+
+```handlebars
 // TODO
 ```
+
 ## Materialize
+
+```css
+// TODO
 ```
+
+## *SASS*
+
+```sass
+// TODO
+```
+## Webpack & Babel
+
+```json
 // TODO
 ```
