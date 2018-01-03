@@ -1,20 +1,21 @@
 'use strict'
 // ===============
-// REQUIRES
-const path = require('path')
-const express = require('express')
-const hbs = require('express-handlebars')
+// IMPORTS
+import path from 'path'
+import express from 'express'
+import hbs from 'express-handlebars'
 
 // ===============
 // SERVER CONFIG
 const server = express()
 const port = process.env.PORT || 3000
 
-server.use(express.static(path.join(__dirname, 'public')))
+// TODO: Change path to /dist after adding SASS
+server.use(express.static(path.join(__dirname, '../src/public')))
 
 // ===============
 // VIEW - HANDLEBARS
-server.set('views', path.join(__dirname, 'views'))
+server.set('views', path.join(__dirname, '../views'))
 server.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutDir: path.join(__dirname, 'views/layouts')}))
 server.set('view engine', 'hbs')
 
